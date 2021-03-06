@@ -7,12 +7,15 @@ namespace PA_tic_tock.Clocks
             return "Cuckoo";
         }
 
-        public WallClock(string name) : base(name)
+
+        public WallClock() : base()
         {
+            ClockType = ClockType.WallClock;
         }
 
-        public WallClock(string name, float delay) : base(name, delay)
+        public WallClock(double delay) : base(delay)
         {
+            ClockType = ClockType.WallClock;
         }
     }
 }

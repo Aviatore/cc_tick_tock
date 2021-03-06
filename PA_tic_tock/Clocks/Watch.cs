@@ -9,13 +9,17 @@ namespace PA_tic_tock.Clocks
             return "Tick Tock";
         }
 
-        public Watch(string name, string color) : base(name)
+        public Watch(string color) : base()
         {
+            ClockType = ClockType.Watch;
+            
             Color = color;
         }
         
-        public Watch(string name, string color, float delay) : base(name, delay)
+        public Watch(string color, double delay) : base(delay)
         {
+            ClockType = ClockType.Watch;
+            
             Color = color;
         }
     }

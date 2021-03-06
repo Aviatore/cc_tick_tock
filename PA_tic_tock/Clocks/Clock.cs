@@ -13,7 +13,7 @@ namespace PA_tic_tock.Clocks
     public abstract class Clock
     {
         public string Name;
-        public ClockType ClockType;
+        public ClockType ClockType { get; set; }
         
         protected int Seconds;
         protected int Minutes;
@@ -25,16 +25,14 @@ namespace PA_tic_tock.Clocks
         
         protected abstract string MakeSound();
 
-        protected Clock(ClockType clockType)
+        protected Clock()
         {
             Delay = 1;
-            ClockType = clockType;
         }
         
-        protected Clock(string name, float delay)
+        protected Clock(double delay)
         {
             Delay = delay;
-            Name = name;
         }
 
         protected void SetTime(int hours, int minutes, int seconds)

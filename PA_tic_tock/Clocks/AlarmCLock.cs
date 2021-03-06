@@ -11,14 +11,14 @@ namespace PA_tic_tock.Clocks
             return "Buzz";
         }
         
-        public AlarmCLock(string name) : base(name)
+        public AlarmCLock() : base()
         {
-
+            ClockType = ClockType.AlarmCLock;
         }
         
-        public AlarmCLock(string name, float delay) : base(name, delay)
+        public AlarmCLock(double delay) : base(delay)
         {
-
+            ClockType = ClockType.AlarmCLock;
         }
         
         public void SetAlarm(int hours, int minutes, int seconds)

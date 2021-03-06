@@ -9,12 +9,14 @@ namespace PA_tic_tock.Clocks
             return "Big Ben";
         }
 
-        public BigBen(string name) : base(name)
+        public BigBen() : base()
         {
+            ClockType = ClockType.BigBen;
         }
 
-        public BigBen(string name, float delay) : base(name, delay)
+        public BigBen(double delay) : base(delay)
         {
+            ClockType = ClockType.BigBen;
         }
     }
 }
