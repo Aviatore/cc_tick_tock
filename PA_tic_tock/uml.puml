@@ -1,0 +1,40 @@
+@startuml
+
+abstract class Clock {
+    int seconds
+    int minutes
+    int hours
+
+    Speed speed
+
+    void SetTime()
+    DateTime Read()
+    string MakeSound()
+}
+
+class WallClock {
+    
+}
+
+class Watch {
+    string color
+}
+
+class AlarmCLock {
+    void SetAlarm()
+    string TimeLeftToSleep()
+}
+
+class BigBen {
+
+}
+
+class ClockShop {
+
+}
+
+Clock <|-- WallClock
+Clock <|-- Watch
+Clock <|-- AlarmCLock
+Clock <|-- BigBen
+@enduml
